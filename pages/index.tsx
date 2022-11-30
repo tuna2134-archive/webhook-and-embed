@@ -17,14 +17,18 @@ const Home: NextPage = () => {
     async function handleSubmit(event) {
         event.preventDefault()
         console.log(fields)
-        await axios.post(event.target.webhook.value, {
-            embeds: [{
-                title: event.target.title.value,
-                description: event.target.description.value,
-                fields: [...fields]
-            }]
-        })
-        toast.success("Sended!")
+        try {
+            await axios.post(event.target.webhook.value, {
+                embeds: [{
+                    title: event.target.title.value,
+                    description: event.target.description.value,
+                    fields: [...fields]
+                }]
+            })
+            toast.success("Sended!")
+        } catch (error) {
+            toast.error(error)
+        }
     }
     function handleChange(index, event) {
         fields[index][event.target.name] = event.target.value
