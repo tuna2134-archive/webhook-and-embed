@@ -48,6 +48,7 @@ const Home: NextPage = () => {
                 <label htmlFor="description">Description</label>
                 <input type="text" className={InsertStyle} name="description" />
                 <div>
+                    <p className="text-2xl">Field</p>
                     {fields.map((field, index) => {
                         return (
                             <div key={index}>
