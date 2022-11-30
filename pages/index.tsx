@@ -39,7 +39,7 @@ const Home: NextPage = () => {
     }
     function rmField(index) {
         fields.splice(index + 1, 1)
-        setFields(fields)
+        setFields([...fields])
     }
     return (
         <div className="px-10">
