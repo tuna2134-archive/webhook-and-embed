@@ -23,9 +23,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             <main className="px-5 py-4">
                 <Component {...pageProps} />
             </main>
-            <footer className="bg-[#5865F2] p-2">
-                <p className="text-center">&copy; 2022 tuna2134</p>
-            </footer>
             <ToastContainer />
         </>
     )
