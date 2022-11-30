@@ -26,8 +26,8 @@ const Home: NextPage = () => {
                 }]
             })
             toast.success("Sended!")
-        } catch (error) {
-            toast.error(error)
+        } catch {
+            toast.error("Can't send")
         }
     }
     function handleChange(index, event) {
