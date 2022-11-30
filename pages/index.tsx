@@ -47,7 +47,7 @@ const Home: NextPage = () => {
                 <input type="text" className={InsertStyle} name="title" />
                 <label htmlFor="description">Description</label>
                 <input type="text" className={InsertStyle} name="description" />
-                <div>
+                <div className="border p-3">
                     <p className="text-2xl">Field</p>
                     {fields.map((field, index) => {
                         return (
