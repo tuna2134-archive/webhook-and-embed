@@ -32,11 +32,14 @@ const Home: NextPage = () => {
         setFields(fields)
     }
     function addField() {
-        console.log("ok")
         setFields([...fields, {
             name: '',
             value: ''
         }])
+    }
+    function rmField(index) {
+        fields.splice(index + 1, 1)
+        setFields(fields)
     }
     return (
         <div className="px-10">
@@ -63,7 +66,9 @@ const Home: NextPage = () => {
                                         name="value" defaultValue={field.value}
                                         onChange={(event) => handleChange(index, event)}/>
                                 </div>
-                                <VscClose />
+                                <button onClick={(index) => rmField(index)} type="button">
+                                    <VscClose />
+                                </button>
                             </div>
                         )
                     })}
