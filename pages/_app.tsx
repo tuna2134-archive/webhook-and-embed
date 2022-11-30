@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <h1 className="text-3xl text-white">Webhooked</h1>
                 <nav className="flex">
                     <Link href="https://github.com/tuna2134/webhook-and-embed">
-                        <a className="px-2"><GoMarkGithub size={70} /></a>
+                        <a className="px-2"><GoMarkGithub size={20} /></a>
                     </Link>
                 </nav>
             </header>
