@@ -38,7 +38,7 @@ const Home: NextPage = () => {
         }])
     }
     function rmField(index) {
-        fields.splice(index + 1, 1)
+        fields.splice(index, 1)
         setFields([...fields])
     }
     return (
