@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import axios from 'axios'
-import {useState} from 'react'
+import { useState } from 'react'
 import { toast } from 'react-toastify';
+import { VscClose } from "react-icons/vsc"
 
 
 const InsertStyle: string = "border border-gray-400 my-2"
@@ -51,15 +52,18 @@ const Home: NextPage = () => {
                     <p className="text-2xl">Field</p>
                     {fields.map((field, index) => {
                         return (
-                            <div key={index}>
-                                <label htmlFor="name">Name: </label>
-                                <input type="text" className={`${InsertStyle} mx-2`}
-                                    name="name" defaultValue={field.name} 
-                                    onChange={(event) => handleChange(index, event)}/>
-                                <label htmlFor="value">Value: </label>
-                                <input type="text" className={`${InsertStyle} mx-2`}
-                                    name="value" defaultValue={field.value}
-                                    onChange={(event) => handleChange(index, event)}/>
+                            <div key={index} className="flex">
+                                <div className="flex">
+                                    <label htmlFor="name">Name: </label>
+                                    <input type="text" className={`${InsertStyle} mx-2`}
+                                        name="name" defaultValue={field.name} 
+                                        onChange={(event) => handleChange(index, event)}/>
+                                    <label htmlFor="value">Value: </label>
+                                    <input type="text" className={`${InsertStyle} mx-2`}
+                                        name="value" defaultValue={field.value}
+                                        onChange={(event) => handleChange(index, event)}/>
+                                </div>
+                                <VscClose />
                             </div>
                         )
                     })}
