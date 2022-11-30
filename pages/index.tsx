@@ -59,7 +59,7 @@ const Home: NextPage = () => {
                     <p className="text-2xl">Field</p>
                     {fields.map((field, index) => {
                         return (
-                            <div key={index} className="flex">
+                            <div key={index} className="flex flex-col md:flex-row">
                                 <div className="flex">
                                     <label htmlFor="name">Name: </label>
                                     <input type="text" className={`${InsertStyle} mx-2`}
