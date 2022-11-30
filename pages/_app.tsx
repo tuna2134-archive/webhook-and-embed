@@ -12,17 +12,22 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Head>
                 <title>Discord webhook</title>
             </Head>
-            <header className="p-2 bg-[#5865F2] flex justify-between">
-                <h1 className="text-3xl text-white">Webhooked</h1>
-                <nav className="flex">
-                    <Link href="https://github.com/tuna2134/webhook-and-embed">
-                        <a className="px-2"><GoMarkGithub size={40} /></a>
-                    </Link>
-                </nav>
-            </header>
-            <main className="px-5 py-4">
-                <Component {...pageProps} />
-            </main>
+            <div className="flex flex-col h-screen">
+                <header className="p-2 bg-[#5865F2] flex justify-between">
+                    <h1 className="text-3xl text-white">Webhooked</h1>
+                    <nav className="flex">
+                        <Link href="https://github.com/tuna2134/webhook-and-embed">
+                            <a className="px-2"><GoMarkGithub size={40} /></a>
+                        </Link>
+                    </nav>
+                </header>
+                <main className="px-5 py-4">
+                    <Component {...pageProps} />
+                </main>
+                <footer className="bg-[#5865F2]">
+                    <p className="text-center">&copy; 2022 tuna2134</p>
+                </footer>
+            </div>
             <ToastContainer />
         </>
     )
