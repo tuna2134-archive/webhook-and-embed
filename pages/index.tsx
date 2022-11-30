@@ -42,7 +42,7 @@ const Home: NextPage = () => {
             <h2 className="text-2xl">Send message</h2>
             <form onSubmit={handleSubmit} className="flex flex-col">
                 <label htmlFor="webhook">Webhookurl:</label>
-                <input type="text" className={InsertStyle} name="webhook" />
+                <input type="url" className={InsertStyle} name="webhook" />
                 <label htmlFor="title">Title:</label>
                 <input type="text" className={InsertStyle} name="title" />
                 <label htmlFor="description">Description</label>
