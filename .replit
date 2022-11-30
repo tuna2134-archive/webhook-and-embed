@@ -1,2 +1,0 @@
-run = 'npm run build && npm run start'
-entrypoint = 'pages/index.jsx'
