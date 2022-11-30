@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                     {fields.map((field, index) => {
                         return (
                             <div key={index} className="flex flex-col md:flex-row">
-                                <div className="flex">
+                                <div className="flex flex-col md:flex-row">
                                     <label htmlFor="name">Name: </label>
                                     <input type="text" className={`${InsertStyle} mx-2`}
                                         name="name" defaultValue={field.name} 
