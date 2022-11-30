@@ -2,6 +2,8 @@
 
 ![image](homepage.jpeg)
 
+webhook-and-embed is easy to send embed with discord webhook.
+
 ## Build
 
 ```sh
