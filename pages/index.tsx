@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import { VscClose } from "react-icons/vsc"
 
 
-const InsertStyle: string = "border border-gray-400 my-2"
+const InsertStyle: string = "border border-gray-400 my-2 outline-none"
 
 const Home: NextPage = () => {
     const [fields, setFields] = useState([
